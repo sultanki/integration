@@ -1,0 +1,17 @@
+#wredman4 9-24-2014 
+#Mid-Point Rule Integration
+import numpy as np
+a=float(input("What is your a? "))
+b=float(input("What is your b? "))
+n=input("How many subintervals do you want? ")
+interval=(b-a)
+deltax=float(interval/n)
+x=np.zeros(n+1)
+for i in range (0,n+1):
+    x[i]=(i*deltax)+a    
+area=0
+for i in range (0,n):
+    xnew=0.5*(x[i]+x[i+1])
+    area=(1/xnew)+area #function needs to be manually changed by user
+area=deltax*area
+print(area)
