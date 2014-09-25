@@ -1,0 +1,19 @@
+#wredman4 9-24-2014
+#Integration by Simpson Rule
+import numpy as np
+a=float(input("What is your a? "))
+b=float(input("What is your b? "))
+n=input("How many subintervals do you want? ")
+interval=(b-a)
+deltax=float(interval/n)
+x=np.zeros(n+1)
+for i in range (0,n+1):
+    x[i]=(i*deltax)+a    
+y=1/x #Need to manually change this function
+for i in range (1,n):
+    if (i+1)%2 ==0:
+        y[i]=4*y[i]
+    else:
+        y[i]=2*y[i]
+area=(deltax/3)*sum(y)
+print "{0:06f}".format(area)
