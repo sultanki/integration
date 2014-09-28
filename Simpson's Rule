@@ -16,4 +16,4 @@ for i in range (1,n):
     else:
         y[i]=2*y[i]
 area=(deltax/3)*sum(y)
-print "{0:06f}".format(area)
+print "{0:0.6f}".format(area) #change the number of decimal points desired
