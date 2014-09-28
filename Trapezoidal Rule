@@ -10,4 +10,4 @@ y=eval(raw_input("What is your y? "))
 for i in range (1,n):
     y[i]=2*y[i]
 area=(deltax/2)*(sum(y))
-print(area)
+print(("{0:0.6}".format(area)) #gives six decimal points. Change if different decimal points are desired
