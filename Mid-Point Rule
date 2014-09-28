@@ -15,4 +15,4 @@ for j in range (0,n):
 x=xnew
 y=eval(raw_input("What is your function? "))
 area=deltax*sum(y)
-print(area)
+print(("{0:0.6}".format(area))
